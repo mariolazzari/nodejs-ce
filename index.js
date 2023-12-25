@@ -1,1 +1,3 @@
-console.log("first");
+require("./add");
+
+console.log("Hello from index.js");
