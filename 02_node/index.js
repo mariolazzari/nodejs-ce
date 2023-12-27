@@ -4,3 +4,4 @@ require("./streams");
 require("./fs");
 require("./http");
 require("./async");
+require("./queues");
