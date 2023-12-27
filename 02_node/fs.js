@@ -1,4 +1,5 @@
 const fs = require("node:fs");
+const fsP = require("node:fs/promises");
 
 console.log("\nFile System");
 const FILE_IN = "file.txt";
@@ -35,3 +36,19 @@ fs.writeFile(FILE_OUT, "Async append", { flag: "a" }, err => {
   }
   console.log("Content appended.");
 });
+
+// read async with promises
+fsP
+  .readFile(FILE_IN, ENC)
+  .then(data => console.log("Promise:", data))
+  .catch(err => console.error(err));
+
+// async await
+(async function readFile() {
+  try {
+    const data = await fsP.readFile(FILE_IN, ENC);
+    console.log("Async read:", data);
+  } catch (error) {
+    console.error(error);
+  }
+})();
