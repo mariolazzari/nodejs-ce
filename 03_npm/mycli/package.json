@@ -1,0 +1,19 @@
+{
+  "name": "mycli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "bin": {
+    "cli": "index.js"
+  },
+  "keywords": [],
+  "author": "Mario Lazzari",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
